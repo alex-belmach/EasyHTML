@@ -1,0 +1,52 @@
+Software Requirements Specification
+
+Document
+
+1	INTRODUCTION
+
+In today's fast moving world, every second counts. Sometimes, each of us dreams of escape from any tedious and routine operations. Washing the dishes, making the bed or once again picking up the newspaper from the mailbox – that all together consums our time. Just imagine how it would be great to have something like set of tools which can do all these routine actions in a moment.
+"EasyHTML" should be one of such tools, realized in reality. As you know, only writing HTML code spends large part of programmer’s time. It sounds very easy: add to web-page a few titles and some lists or tables. However, it can curtail  developer’s time resources. Much easier to click the "Add table" button than write about ten tags.
+Application "EasyHTML" should make the work of coder a bit easier by quick generation of HTML code based on the requests and needs of the programmer.
+
+
+2 	USER REQUIREMENTS
+
+2.1 Software interfaces
+The program should be a desktop application that runs on different platforms such as Windows, UNIX or MacOS. Project realization using a cross-platform language Java necessarily implies the existence of JVM on the user’s platform.
+
+2.2 User Interface
+"EasyHTML" should provide the user with access to the software functional through the appropriate control buttons.
+The code generation result needs to be placed in special textEditor's (msgBox's).
+
+2.3 Characteristics of Users
+The program should be oriented on programmers, students, web designers, and the regular PC user.
+That software does’t require a certain level of programming knowledge, because input data is a simple text information that is easy to understand for everyone.
+
+2.4 Assumptions and Dependencies
+The requirements for the project depend on HTML standards. Also, new techniques of the product realization in the web-development sphere involve changes in the structure of the project.
+
+
+3	SYSTEM REQUIREMENTS
+
+3.1 Functional requirements
+Main features of the application directly depend on the variety of HTML tags. Tags are divided into the following groups:
+1) Main tags:
+   1.1) html.
+   1.2) head.
+   1.3) body.
+2) Header tags:
+   2.1) title.
+3) Text formating tags:
+   3.1) h1 - h6.
+   3.2) strong.
+   3.3) b.
+   3.4) i.
+   3.5) em.
+4) Other:
+   4.1) a.
+   4.2) table.
+   4.3) ol / ul.
+The application should open the generated code as HTML-file directly from the program interface. Also, the program must have an ability to directly change the generated code (textEdit). 
+
+3.2 Non-functional requirements
+Non-functional requirements include simple graphical interface and easy-understanding logic for any group of users that wants to generate the HTML-code.
