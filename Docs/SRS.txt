@@ -36,6 +36,7 @@ Main features of the application directly depend on the variety of HTML tags. Ta
    1.3) body.
 2) Header tags:
    2.1) title.
+   2.2) link.
 3) Text formating tags:
    3.1) h1 - h6.
    3.2) strong.
@@ -46,6 +47,8 @@ Main features of the application directly depend on the variety of HTML tags. Ta
    4.1) a.
    4.2) table.
    4.3) ol / ul.
+   4.4) div.
+   4.5) span.
 The application should open the generated code as HTML-file directly from the program interface. Also, the program must have an ability to directly change the generated code (textEdit). 
 
 3.2 Non-functional requirements
