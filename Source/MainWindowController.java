@@ -1,13 +1,20 @@
 package sample;
 
+import javafx.stage.FileChooser;
+
+import java.io.*;
+
 public class MainWindowController {
     public void clickOpen() {
+        CodeBrowser.getInstance().openFile();
     }
 
     public void clickSave() {
+        CodeBrowser.getInstance().saveFile();
     }
 
     public void clickPreview() {
+        CodeBrowser.getInstance().previewFile();
     }
 
     public void clickHead() {
@@ -95,5 +102,6 @@ public class MainWindowController {
     }
 
     public void clickExit() {
+        Main.getStage().close();
     }
 }

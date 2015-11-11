@@ -6,49 +6,48 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="mainAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MainWindowController">
+<AnchorPane id="mainAnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="510.0" prefWidth="765.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.MainWindowController">
    <children>
-      <Button layoutX="48.0" layoutY="336.0" mnemonicParsing="false" onAction="#clickOpen" text="Open" />
-      <Button layoutX="118.0" layoutY="336.0" mnemonicParsing="false" onAction="#clickSave" text="Save" />
-      <Button layoutX="182.0" layoutY="336.0" mnemonicParsing="false" onAction="#clickPreview" text="Preview" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#909eab" height="286.0" layoutX="381.0" layoutY="48.0" stroke="BLACK" strokeType="INSIDE" width="211.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fbfdff" height="84.0" layoutX="390.0" layoutY="239.0" stroke="BLACK" strokeType="INSIDE" width="123.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fbfdff" height="54.0" layoutX="389.0" layoutY="56.0" stroke="BLACK" strokeType="INSIDE" width="193.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fbfdff" height="54.0" layoutX="389.0" layoutY="178.0" stroke="BLACK" strokeType="INSIDE" width="193.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fbfdff" height="54.0" layoutX="389.0" layoutY="117.0" stroke="BLACK" strokeType="INSIDE" width="193.0" />
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fbfdff" height="84.0" layoutX="520.0" layoutY="239.0" stroke="BLACK" strokeType="INSIDE" width="63.0" />
-      <Label layoutX="468.0" layoutY="19.0" text="Tags">
+      <Button layoutX="55.0" layoutY="420.0" mnemonicParsing="false" onAction="#clickOpen" prefHeight="33.0" prefWidth="78.0" text="Open" />
+      <Button layoutX="166.0" layoutY="420.0" mnemonicParsing="false" onAction="#clickSave" prefHeight="33.0" prefWidth="63.0" text="Save" />
+      <Button layoutX="264.0" layoutY="420.0" mnemonicParsing="false" onAction="#clickPreview" prefHeight="33.0" prefWidth="84.0" text="Preview" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#909eab" height="286.0" layoutX="540.0" layoutY="43.0" stroke="BLACK" strokeType="INSIDE" width="211.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fbfdff" height="84.0" layoutX="549.0" layoutY="234.0" stroke="BLACK" strokeType="INSIDE" width="123.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fbfdff" height="54.0" layoutX="548.0" layoutY="51.0" stroke="BLACK" strokeType="INSIDE" width="193.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fbfdff" height="54.0" layoutX="548.0" layoutY="173.0" stroke="BLACK" strokeType="INSIDE" width="193.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fbfdff" height="54.0" layoutX="548.0" layoutY="112.0" stroke="BLACK" strokeType="INSIDE" width="193.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#fbfdff" height="84.0" layoutX="679.0" layoutY="234.0" stroke="BLACK" strokeType="INSIDE" width="63.0" />
+      <Label layoutX="627.0" layoutY="14.0" text="Tags">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <Button layoutX="464.0" layoutY="78.0" mnemonicParsing="false" onAction="#clickHead" text="head" />
-      <Button layoutX="523.0" layoutY="78.0" mnemonicParsing="false" onAction="#clickBody" text="body" />
-      <Button layoutX="405.0" layoutY="78.0" mnemonicParsing="false" onAction="#clickHtml" text="html" />
-      <Button layoutX="533.0" layoutY="261.0" mnemonicParsing="false" onAction="#clickTitle" text="title" />
-      <Button layoutX="534.0" layoutY="292.0" mnemonicParsing="false" onAction="#clickLink" text="link" />
-      <Button layoutX="545.0" layoutY="141.0" mnemonicParsing="false" onAction="#clickH6" prefHeight="18.0" prefWidth="30.0" text="h6" />
-      <Button layoutX="515.0" layoutY="141.0" mnemonicParsing="false" onAction="#clickH5" text="h5" />
-      <Button layoutX="485.0" layoutY="141.0" mnemonicParsing="false" onAction="#clickH4" text="h4" />
-      <Button layoutX="425.0" layoutY="141.0" mnemonicParsing="false" onAction="#clickH2" text="h2" />
-      <Button layoutX="395.0" layoutY="141.0" mnemonicParsing="false" onAction="#clickH1" text="h1" />
-      <Button layoutX="455.0" layoutY="141.0" mnemonicParsing="false" onAction="#clickH3" text="h3" />
-      <Button layoutX="408.0" layoutY="200.0" mnemonicParsing="false" onAction="#clickStrong" text="strong" />
-      <Button layoutX="468.0" layoutY="200.0" mnemonicParsing="false" onAction="#clickI" text="i" />
-      <Button layoutX="496.0" layoutY="200.0" mnemonicParsing="false" onAction="#clickB" text="b" />
-      <Button layoutX="529.0" layoutY="200.0" mnemonicParsing="false" onAction="#clickEm" text="em" />
-      <Button layoutX="483.0" layoutY="292.0" mnemonicParsing="false" onAction="#clickA" text="a" />
-      <Button layoutX="397.0" layoutY="261.0" mnemonicParsing="false" onAction="#clickSpan" text="span" />
-      <Button layoutX="396.0" layoutY="292.0" mnemonicParsing="false" onAction="#clickDiv" text="div" />
-      <Button layoutX="433.0" layoutY="292.0" mnemonicParsing="false" onAction="#clickTable" text="table" />
-      <Button layoutX="480.0" layoutY="261.0" mnemonicParsing="false" onAction="#clickUl" text="ul" />
-      <Button layoutX="446.0" layoutY="261.0" mnemonicParsing="false" onAction="#clickOl" text="ol" />
-      <Label layoutX="447.0" layoutY="180.0" text="Text Formatting" underline="true" />
-      <Label layoutX="462.0" layoutY="59.0" text="Structure" underline="true" />
-      <Label layoutX="532.0" layoutY="241.0" text="Header" underline="true" />
-      <Label layoutX="239.0" layoutY="206.0" />
-      <Label layoutX="438.0" layoutY="240.0" text="Other" underline="true" />
-      <Label layoutX="460.0" layoutY="120.0" text="Headlines" underline="true" />
-      <Button layoutX="307.0" layoutY="336.0" mnemonicParsing="false" onAction="#clickExit" text="Exit" />
+      <Button layoutX="623.0" layoutY="73.0" mnemonicParsing="false" onAction="#clickHead" text="head" />
+      <Button layoutX="682.0" layoutY="73.0" mnemonicParsing="false" onAction="#clickBody" text="body" />
+      <Button layoutX="564.0" layoutY="73.0" mnemonicParsing="false" onAction="#clickHtml" text="html" />
+      <Button layoutX="692.0" layoutY="256.0" mnemonicParsing="false" onAction="#clickTitle" text="title" />
+      <Button layoutX="693.0" layoutY="287.0" mnemonicParsing="false" onAction="#clickLink" text="link" />
+      <Button layoutX="704.0" layoutY="136.0" mnemonicParsing="false" onAction="#clickH6" prefHeight="18.0" prefWidth="30.0" text="h6" />
+      <Button layoutX="674.0" layoutY="136.0" mnemonicParsing="false" onAction="#clickH5" text="h5" />
+      <Button layoutX="644.0" layoutY="136.0" mnemonicParsing="false" onAction="#clickH4" text="h4" />
+      <Button layoutX="584.0" layoutY="136.0" mnemonicParsing="false" onAction="#clickH2" text="h2" />
+      <Button layoutX="554.0" layoutY="136.0" mnemonicParsing="false" onAction="#clickH1" text="h1" />
+      <Button layoutX="614.0" layoutY="136.0" mnemonicParsing="false" onAction="#clickH3" text="h3" />
+      <Button layoutX="567.0" layoutY="195.0" mnemonicParsing="false" onAction="#clickStrong" text="strong" />
+      <Button layoutX="627.0" layoutY="195.0" mnemonicParsing="false" onAction="#clickI" text="i" />
+      <Button layoutX="655.0" layoutY="195.0" mnemonicParsing="false" onAction="#clickB" text="b" />
+      <Button layoutX="688.0" layoutY="195.0" mnemonicParsing="false" onAction="#clickEm" text="em" />
+      <Button layoutX="642.0" layoutY="287.0" mnemonicParsing="false" onAction="#clickA" text="a" />
+      <Button layoutX="556.0" layoutY="256.0" mnemonicParsing="false" onAction="#clickSpan" text="span" />
+      <Button layoutX="555.0" layoutY="287.0" mnemonicParsing="false" onAction="#clickDiv" text="div" />
+      <Button layoutX="592.0" layoutY="287.0" mnemonicParsing="false" onAction="#clickTable" text="table" />
+      <Button layoutX="639.0" layoutY="256.0" mnemonicParsing="false" onAction="#clickUl" text="ul" />
+      <Button layoutX="605.0" layoutY="256.0" mnemonicParsing="false" onAction="#clickOl" text="ol" />
+      <Label layoutX="606.0" layoutY="175.0" text="Text Formatting" underline="true" />
+      <Label layoutX="621.0" layoutY="54.0" text="Structure" underline="true" />
+      <Label layoutX="691.0" layoutY="236.0" text="Header" underline="true" />
+      <Label layoutX="597.0" layoutY="235.0" text="Other" underline="true" />
+      <Label layoutX="619.0" layoutY="115.0" text="Headlines" underline="true" />
+      <Button layoutX="628.0" layoutY="420.0" mnemonicParsing="false" onAction="#clickExit" prefHeight="33.0" prefWidth="49.0" text="Exit" />
    </children>
 </AnchorPane>
