@@ -1,80 +1,99 @@
 package sample;
 
-import javafx.event.ActionEvent;
-
 public class MainWindowController {
-    public void clickOpen(ActionEvent actionEvent) {
+    public void clickOpen() {
     }
 
-    public void clickSave(ActionEvent actionEvent) {
+    public void clickSave() {
     }
 
-    public void clickPreview(ActionEvent actionEvent) {
+    public void clickPreview() {
     }
 
-    public void clickHead(ActionEvent actionEvent) {
+    public void clickHead() {
+        new TagAttributesWindow("head");
     }
 
-    public void clickBody(ActionEvent actionEvent) {
+    public void clickBody() {
+        new TagAttributesWindow("body");
     }
 
-    public void clickHtml(ActionEvent actionEvent) {
+    public void clickHtml() {
+        new TagAttributesWindow("html");
     }
 
-    public void clickTitle(ActionEvent actionEvent) {
+    public void clickTitle() {
+        new TagAttributesWindow("title");
     }
 
-    public void clickLink(ActionEvent actionEvent) {
+    public void clickLink() {
+        new TagAttributesWindow("link");
     }
 
-    public void clickH6(ActionEvent actionEvent) {
+    public void clickH6() {
+        new TagAttributesWindow("h6");
     }
 
-    public void clickH5(ActionEvent actionEvent) {
+    public void clickH5() {
+        new TagAttributesWindow("h5");
     }
 
-    public void clickH4(ActionEvent actionEvent) {
+    public void clickH4() {
+        new TagAttributesWindow("h4");
     }
 
-    public void clickH2(ActionEvent actionEvent) {
+    public void clickH2() {
+        new TagAttributesWindow("h2");
     }
 
-    public void clickH1(ActionEvent actionEvent) {
+    public void clickH1() {
+        new TagAttributesWindow("h1");
     }
 
-    public void clickH3(ActionEvent actionEvent) {
+    public void clickH3() {
+        new TagAttributesWindow("h3");
     }
 
-    public void clickStrong(ActionEvent actionEvent) {
+    public void clickStrong() {
+        new TagAttributesWindow("strong");
     }
 
-    public void clickI(ActionEvent actionEvent) {
+    public void clickI() {
+        new TagAttributesWindow("i");
     }
 
-    public void clickB(ActionEvent actionEvent) {
+    public void clickB() {
+        new TagAttributesWindow("b");
     }
 
-    public void clickEm(ActionEvent actionEvent) {
+    public void clickEm() {
+        new TagAttributesWindow("em");
     }
 
-    public void clickA(ActionEvent actionEvent) {
+    public void clickA() {
+        new TagAttributesWindow("a");
     }
 
-    public void clickDiv(ActionEvent actionEvent) {
+    public void clickDiv() {
+        new TagAttributesWindow("div");
     }
 
-    public void clickSpan(ActionEvent actionEvent) {
+    public void clickSpan() {
+        new TagAttributesWindow("span");
     }
 
-    public void clickTable(ActionEvent actionEvent) {
+    public void clickTable() {
+        new TagAttributesWindow("table");
     }
 
-    public void clickUl(ActionEvent actionEvent) {
+    public void clickUl() {
+        new TagAttributesWindow("ul");
     }
 
-    public void clickOl(ActionEvent actionEvent) {
+    public void clickOl() {
+        new TagAttributesWindow("ol");
     }
 
-    public void clickExit(ActionEvent actionEvent) {
+    public void clickExit() {
     }
 }
