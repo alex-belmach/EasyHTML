@@ -9,6 +9,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.Objects;
 
 
 /**
@@ -17,6 +18,7 @@ import java.io.IOException;
 
 public class CodeBrowser {
     private static CodeBrowser instance;
+    private Integer caretPosition = 0;
     @FXML
     private TextArea textArea;
     private File file;
@@ -32,26 +34,22 @@ public class CodeBrowser {
         textArea = new TextArea();
         textArea.setLayoutX(15);
         textArea.setLayoutY(15);
-        textArea.setPrefSize(485, 380);
+        textArea.setPrefSize(508, 380);
+        textArea.setOnMouseClicked(event -> caretPosition = textArea.getCaretPosition());
+        textArea.setOnKeyReleased(event -> caretPosition = textArea.getCaretPosition());
         setText("<!DOCTYPE html>\n" +
                 "<html>\n" +
                 "<head>\n" +
+                "\t<meta charset=\"utf-8\">\n" +
+                "\t<title></title>\n\n" +
                 "</head>\n" +
-                "<body>\n" +
+                "<body>\n\n" +
                 "</body>\n" +
                 "</html>");
     }
 
-    protected TextArea getTextArea() {
-        return textArea;
-    }
-
-    protected void setText(String text) {
-        textArea.setText(text);
-    }
-
-    protected String getText() {
-        return textArea.getText();
+    protected void insertTag(String tagString) {
+        textArea.insertText(caretPosition, tagString);
     }
 
     protected void saveFile() {
@@ -60,12 +58,14 @@ public class CodeBrowser {
         FileChooser.ExtensionFilter extFilter =  new FileChooser.ExtensionFilter("HTML files (*.html)", "*.html");
         fileChooser.getExtensionFilters().add(extFilter);
         file = fileChooser.showSaveDialog(Main.getStage());
-        try {
-            FileOutputStream outputStream = new FileOutputStream(file);
-            outputStream.write(CodeBrowser.getInstance().getText().getBytes());
-            outputStream.close();
-        } catch (IOException e) {
-            e.printStackTrace();
+        if (file != null) {
+            try {
+                FileOutputStream outputStream = new FileOutputStream(file);
+                outputStream.write(CodeBrowser.getInstance().getText().getBytes());
+                outputStream.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
     }
 
@@ -73,7 +73,7 @@ public class CodeBrowser {
         FileChooser fileChooser = new FileChooser();
         fileChooser.setTitle("Open HTML File");
         fileChooser.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("HTML files (*.html)", "*.html"),
-                                                 new FileChooser.ExtensionFilter("Text Documents (*.txt)", "*.txt"));
+                new FileChooser.ExtensionFilter("Text Documents (*.txt)", "*.txt"));
         file = fileChooser.showOpenDialog(Main.getStage());
         if (file != null) {
             try {
@@ -89,6 +89,10 @@ public class CodeBrowser {
 
     protected void previewFile() {
         Desktop desktop = null;
+        if (Objects.equals(file, null))
+            saveFile();
+        if (Objects.equals(file, null))
+            return;
         if (Desktop.isDesktopSupported()) {
             desktop = Desktop.getDesktop();
         }
@@ -98,5 +102,17 @@ public class CodeBrowser {
         } catch (IOException ioe) {
             ioe.printStackTrace();
         }
+    }
+
+    protected TextArea getTextArea() {
+        return textArea;
+    }
+
+    protected void setText(String text) {
+        textArea.setText(text);
+    }
+
+    protected String getText() {
+        return textArea.getText();
     }
 }

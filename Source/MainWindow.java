@@ -40,6 +40,7 @@ public class MainWindow {
         anchorPane.getChildren().add(CodeBrowser.getInstance().getTextArea());
 
         Scene scene = new Scene(mainPageRoot);
+        stage.setResizable(false);
         stage.setScene(scene);
     }
 

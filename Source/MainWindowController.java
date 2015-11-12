@@ -1,9 +1,5 @@
 package sample;
 
-import javafx.stage.FileChooser;
-
-import java.io.*;
-
 public class MainWindowController {
     public void clickOpen() {
         CodeBrowser.getInstance().openFile();
@@ -102,6 +98,7 @@ public class MainWindowController {
     }
 
     public void clickExit() {
+        CodeBrowser.getInstance().saveFile();
         Main.getStage().close();
     }
 }
