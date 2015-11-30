@@ -1,6 +1,7 @@
 package sample;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.TextArea;
 import javafx.stage.FileChooser;
 
@@ -9,6 +10,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Objects;
 
 
@@ -22,6 +24,7 @@ public class CodeBrowser {
     @FXML
     private TextArea textArea;
     private File file;
+    private final ArrayList<String> basis;
 
     public static CodeBrowser getInstance() {
         if (instance == null) {
@@ -37,6 +40,18 @@ public class CodeBrowser {
         textArea.setPrefSize(508, 380);
         textArea.setOnMouseClicked(event -> caretPosition = textArea.getCaretPosition());
         textArea.setOnKeyReleased(event -> caretPosition = textArea.getCaretPosition());
+        basis = new ArrayList<>();
+        basis.add("<!DOCTYPE html>");
+        basis.add("<html>");
+        basis.add("<head>");
+        basis.add("<meta charset=\"utf-8\">");
+        basis.add("<title>");
+        basis.add("</title>");
+        basis.add("</head>");
+        basis.add("<body>");
+        basis.add("</body>");
+        basis.add("</html>");
+
         setText("<!DOCTYPE html>\n" +
                 "<html>\n" +
                 "<head>\n" +
@@ -97,8 +112,15 @@ public class CodeBrowser {
             desktop = Desktop.getDesktop();
         }
         try {
-            assert desktop != null;
-            desktop.open(file);
+            if (checkBasis()) {
+                assert desktop != null;
+                desktop.open(file);
+            } else
+            {
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setContentText("Code must contains all main tags!");
+                alert.showAndWait();
+            }
         } catch (IOException ioe) {
             ioe.printStackTrace();
         }
@@ -114,5 +136,13 @@ public class CodeBrowser {
 
     protected String getText() {
         return textArea.getText();
+    }
+
+    private boolean checkBasis() {
+        for (String tag: basis) {
+            if (!textArea.getText().contains(tag))
+                return false;
+        }
+        return true;
     }
 }
