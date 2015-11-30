@@ -1,4 +1,4 @@
-Software Requirements Specification
+﻿Software Requirements Specification
 
 Document
 
@@ -57,15 +57,11 @@ groups:
    4.1) a.
    4.2) table.
    4.3) ol / ul.
-<<<<<<< HEAD
    4.4) div.
    4.5) span.
-The application should open the generated code as HTML-file directly from the program interface. Also, the program must have an ability to directly change the generated code (textEdit). 
-=======
 The application should open the generated code as HTML-file directly from the program interface. Also, the program
 must have an ability to directly change the generated code (textEdit). 
->>>>>>> origin/master
 
 3.2 Non-functional requirements
 Non-functional requirements include simple graphical interface and easy-understanding logic for any group of users
-that wants to generate the HTML-code.
+that wants to generate the HTML-code. Execution time of each function should not exceed 5ms.
